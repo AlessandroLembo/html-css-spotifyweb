@@ -38,7 +38,7 @@ footer{
 header{
     height: 80px;
     background-color: lightgray;
-    position: relative;
+    position: relative; 
 }
 
 .content{
@@ -70,6 +70,24 @@ header{
     border: 2px dashed red;
 }
 
+.menu-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-list li{
+    list-style-type: none;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-list a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 30px;
+}
 
 /******************************
 RESPONSIVE
@@ -77,6 +95,13 @@ RESPONSIVE
 
 /* Laptop Responsive */
 @media screen and (max-width: 1200px){
+    /* menu navigazione responsive laptop */
+    .menu-list li{
+        flex-basis: 20%;
+    }
+    
+    
+    /* card responsive laptop */
     .col-size{
         flex-basis: 25%;
     }
@@ -84,6 +109,12 @@ RESPONSIVE
 
 /* Tablet Responsive */
 @media screen and (max-width: 992px){
+    /* menu navigazione responsive tablet */
+    .menu-list li{
+        flex-basis: calc(100% / 3);
+    }
+
+    /* card responsive tablet */
     .col-size{
         flex-basis: 50%;
     }
@@ -92,11 +123,17 @@ RESPONSIVE
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px){
+    /* side-bar respponsive mobile */
     .nav-bar{
         width: 30px;
     }    
-
+     
     .mini-wrapper{
         width: calc(100% - 30px);
+    }
+
+    /* menu navigazione responsive mobile */
+    .menu-list li{
+        flex-basis: 25%;
     }
 }
