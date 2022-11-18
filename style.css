@@ -20,37 +20,41 @@ footer{
 }
 
 .wrapper{
-    /* overflow-y: auto; */
     background-color: aqua;
     display: flex;
 }
 
 .nav-bar{
     height: calc(100vh - 80px);
-    /* overflow-y: auto;  */
-    width: 15%;
+    width: 150px;
     background-color: brown;
 }
 
 .mini-wrapper{
-    /*height: calc(100vh - 80px); 
-    overflow-y: auto;  */
-    width: 85%;
+    width: calc(100% - 150px);
     background-color: green;
 }
 
 header{
     height: 80px;
-    background-color: rgba(255, 255, 255, 0.5);
-    position: sticky;
-    top: 0;
-    left: 15%;
+    background-color: lightgrey;
+    position: relative;
 }
 
 .content{
     height: calc(100vh - 160px);
     overflow-y: auto;
 }
+
+/* Utils */
+.btn-header{
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+
 
 
 /******************************
@@ -70,5 +74,7 @@ RESPONSIVE
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px){
-    
+    .nav-bar{
+        width: 30px;
+    }    
 }
