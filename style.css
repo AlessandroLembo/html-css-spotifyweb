@@ -137,6 +137,14 @@ RESPONSIVE
     .nav-bar{
         width: 30px;
     }    
+
+    .nav-mobile{
+        display: none;
+    }
+
+    .bottom-nav span{
+        display: none;
+    }
      
     .mini-wrapper{
         width: calc(100% - 30px);
@@ -146,4 +154,6 @@ RESPONSIVE
     .menu-list li{
         flex-basis: 25%;
     }
+
+
 }
