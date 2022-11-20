@@ -29,12 +29,12 @@ footer{
 
 .nav-bar{
     height: calc(100vh - 80px);
-    width: 150px;
+    width: 230px;
     background-color: brown;
 }
 
 .mini-wrapper{
-    width: calc(100% - 150px);
+    width: calc(100% - 230px);
     background-color: green;
 }
 
@@ -115,6 +115,7 @@ img{
 }
 
 /* Footer */
+/* playing brano in esecuzione */
 .footer-row{
     display: flex;
     justify-content: space-between;
@@ -130,6 +131,7 @@ img{
 
 .playing{
     display: flex;
+    align-items: center;
 }
 
 .song-playing{
@@ -137,6 +139,7 @@ img{
     justify-content: flex-start;
     align-items: center;
     height: 50px;
+    margin-right: 20px;
 }
 
 .song-img{
@@ -144,8 +147,39 @@ img{
     width: 50px;
 }
 
+/* time-playing comandi del brano */
+.command-song{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
 
+.command-song *{
+    padding: 0 20px;
+    color: white;
+    font-size: 15px;
+}
 
+.fa-circle-play{
+    font-size: 20px;
+}
+
+.bar-song{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bar-song *{
+    padding: 0 20px;
+    font-size: 12px;
+}
+
+.timing-bar{
+    flex-basis: 80%;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+}
 
 
 /******************************
@@ -177,30 +211,40 @@ RESPONSIVE
     .col-size{
         flex-basis: 50%;
     }
+
+    /* Footer tablet responsive */
+    .w-33{
+        flex-basis: 35%;
+    }
+   
+    .w-33:first-child{
+        flex-basis: 30%;
+    }
+
+    .song-img{
+        height: 40px;
+        width: 40px;
+    }
+    
+    .save-song{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px){
     .mini-wrapper{
-        width: calc(100% - 40px);
+        width: calc(100% - 50px);
     }
     
     /* side-bar respponsive mobile */
     .nav-bar{
-        width: 40px;
+        width: 50px;
     }    
 
-    /*
     .invisible-mobile{
-        display: none; 
-    }*/
-
-    .icon-topnav span{
-        display: none; 
-    }
-
-    figure:first-child{
         display: none; 
     }
 
@@ -216,38 +260,38 @@ RESPONSIVE
         display: none;
     }
 
-    .new-playlist span{
-        /* display: block; */
-    }
-
     .name-playlist li{
         display: none;
     }
-
-    .icon-bottomnav span{
-        display: none; 
-    }
-
-
-
-
-    
-    
-    
-    
-    
-
-    
-
-    
-
-    
-
 
     /* menu navigazione responsive mobile */
     .menu-list li{
         flex-basis: 25%;
     }
 
+    /* footer mobile responsive */
+    /* playing brano in esecuzione mobile responsive*/
+
+    .w33{
+        flex-basis: calc(100% / 3);
+    }
+
+    .w-33:first-child{
+        flex-basis: calc(100% / 3); 
+    }
+
+    .song-img{
+        height: 30px;
+        width: 30px; 
+    }
+
+    /* time-playing comandi del brano mobile responsive */
+    .bar-song *{
+        padding: 0 5px;
+    }
+
+    .command-song *{
+        padding: 0 20px;
+    }
 
 }

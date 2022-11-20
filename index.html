@@ -22,28 +22,28 @@
                 <!--immagini della side-bar-->
                 <div class="icon-topnav">
                   
-                  <figure>
+                  <figure class="invisible-mobile">
                     <img src="img/logo.svg" alt="logo">
                   </figure>
 
                   <figure class="visible-mobile">
                     <img src="img/logo-small.svg" alt="logo small">
                   </figure>
-                   
+              
                   <figure>
                     <img src="img/home.svg" alt="home">
                   </figure>
-                  <span>Home</span>
-                
+                  <span class="invisible-mobile">Home</span>
+                  
                   <figure>
                     <img src="img/search.svg" alt="Cerca">
                   </figure>
-                  <span>Cerca</span>
-
+                  <span class="invisible-mobile">Cerca</span>
+                  
                   <figure>
                     <img src="img/libreria.svg" alt="libreria">
                   </figure>
-                  <span>La tua libreria</span>
+                  <span class="invisible-mobile">La tua libreria</span>
                   
                   
                   
@@ -79,7 +79,7 @@
                   <figure>
                     <img src="img/profile.svg" alt="user">
                   </figure>
-                  <span>John Doe</span>
+                  <span id="invisible">John Doe</span>
                 </div>
               </div>
 
@@ -208,7 +208,20 @@
                 <i class="fa-regular fa-folder"></i>
               </div>
             </div>
-            <div class="time-playing w-33"></div>
+            <div class="time-playing w-33">
+              <div class="command-song">
+                <i class="fa-solid fa-shuffle "></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-regular fa-circle-play"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+              </div>
+              <div class="bar-song">
+                <span>0:25</span>
+                <div class="timing-bar"></div>
+                <span>4:35</span>
+              </div>
+            </div>
             <div class="setting w-33"></div>
           </div>  
         </footer>
