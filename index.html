@@ -20,29 +20,43 @@
           <nav class="nav-bar flex-column">
               <div class="top-nav">
                 <!--immagini della side-bar-->
-                <div class="icon-topnav nav-mobile">
-                <figure>
-                  <img src="img/logo.svg" alt="logo">
-                </figure>
-                <figure>
-                  <img src="img/logo.svg" alt="logo">
-                </figure>
-                <figure>
-                  <img src="img/logo.svg" alt="logo">
-                </figure>
-                <figure>
-                  <img src="img/logo.svg" alt="logo">
-                </figure>
+                <div class="icon-topnav">
+                  
+                  <figure>
+                    <img src="img/logo.svg" alt="logo">
+                  </figure>
+
+                  <figure class="visible-mobile">
+                    <img src="img/logo-small.svg" alt="logo small">
+                  </figure>
+                   
+                  <figure>
+                    <img src="img/home.svg" alt="home">
+                  </figure>
+                  <span>Home</span>
+                
+                  <figure>
+                    <img src="img/search.svg" alt="Cerca">
+                  </figure>
+                  <span>Cerca</span>
+
+                  <figure>
+                    <img src="img/libreria.svg" alt="libreria">
+                  </figure>
+                  <span>La tua libreria</span>
+                  
+                  
+                  
                 </div>
                 <!--playlist della side-bar-->
-                <div class="nav-playlist nav-mobile">
+                <div class="nav-playlist mobile-playlist">
                   <div class="new-playlist">
                     <h2>Playlist</h2>
                     <i class="fa-solid fa-square-plus"></i>
                     <span>Crea Playlist</span>
                   </div>
                   <nav>
-                    <ul>
+                    <ul class="name-playlist">
                       <li><a href="#">Nome playlist</a></li>
                       <li><a href="#">Nome playlist</a></li>
                       <li><a href="#">Nome playlist</a></li>
@@ -54,18 +68,21 @@
                   </nav>
                 </div>
               </div>
+              
               <div class="bottom-nav">
-                <div class="download-nav">
-                  <img src="img/download.svg" alt="install app">
-                  <span>bottom</span>
-                </div>
-                <div class="nav-mobile"></div>
-                <div class="profile-nav">
-                  <img src="img/profile.svg" alt="User">
-                  <span>bottom</span>
+                <div class="icon-bottomnav">
+                  <figure>
+                    <img src="img/download.svg" alt="installa app">
+                  </figure>
+                  <span>Installa app</span>
+                  <div class="nav-mobile"></div>
+                  <figure>
+                    <img src="img/profile.svg" alt="user">
+                  </figure>
+                  <span>John Doe</span>
                 </div>
               </div>
-          
+
           </nav>
           
           <div class="mini-wrapper">
@@ -175,7 +192,25 @@
           </div>
         </div>
         <footer>
-
+          <div class="footer-row">
+            <div class="playing w-33">
+              <div class="song-playing">
+                <figure class="song-img">
+                  <img src="img/sinister.jpeg" alt="sinister">
+                </figure>  
+                <div class="song-name">
+                  <h3>Sinister</h3>
+                  <span>Brano nome</span>
+                </div>
+              </div>
+              <div class="save-song">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-folder"></i>
+              </div>
+            </div>
+            <div class="time-playing w-33"></div>
+            <div class="setting w-33"></div>
+          </div>  
         </footer>
     </div>
     

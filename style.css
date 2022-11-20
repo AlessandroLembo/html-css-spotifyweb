@@ -49,21 +49,12 @@ header{
     overflow-y: auto;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 /* Utils */
-.btn-header{
-    text-align: right;
-    position: absolute;
-    right: 0;
-    top: 20px;
-}
-
-.flex-column{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -74,12 +65,29 @@ header{
     padding: 1rem;
 }
 
-.col-size{
-    min-height: 200px;
-    flex-basis: calc(100% / 6); 
-    border: 2px dashed red;
+/* Side-bar */
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
+.visible-mobile{
+    display: none;
+}
+
+
+/* Header */
+.btn-header{
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+/* menu navigazione del content */
 .menu-list{
     display:flex;
     flex-wrap: wrap;
@@ -98,6 +106,47 @@ header{
     color: rgba(255, 255, 255, 0.4);
     font-size: 30px;
 }
+
+/* content spotify */
+.col-size{
+    min-height: 200px;
+    flex-basis: calc(100% / 6); 
+    border: 2px dashed red;
+}
+
+/* Footer */
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.w-33{
+    height: 50px;
+    border: 1px dashed red;
+    flex-basis: calc(100% / 3);
+}
+
+.playing{
+    display: flex;
+}
+
+.song-playing{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+}
+
+.song-img{
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
 
 /******************************
 RESPONSIVE
@@ -133,22 +182,67 @@ RESPONSIVE
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px){
+    .mini-wrapper{
+        width: calc(100% - 40px);
+    }
+    
     /* side-bar respponsive mobile */
     .nav-bar{
-        width: 30px;
+        width: 40px;
     }    
 
-    .nav-mobile{
+    /*
+    .invisible-mobile{
+        display: none; 
+    }*/
+
+    .icon-topnav span{
+        display: none; 
+    }
+
+    figure:first-child{
+        display: none; 
+    }
+
+    .visible-mobile{
+        display: block;
+    }
+    
+    .new-playlist h2{
         display: none;
     }
 
-    .bottom-nav span{
+    .new-playlist i{
         display: none;
     }
-     
-    .mini-wrapper{
-        width: calc(100% - 30px);
+
+    .new-playlist span{
+        /* display: block; */
     }
+
+    .name-playlist li{
+        display: none;
+    }
+
+    .icon-bottomnav span{
+        display: none; 
+    }
+
+
+
+
+    
+    
+    
+    
+    
+
+    
+
+    
+
+    
+
 
     /* menu navigazione responsive mobile */
     .menu-list li{
