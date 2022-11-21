@@ -20,27 +20,25 @@
 .container{
     height: calc(100vh - 80px);
     overflow: auto;
-    background-color: aqua;
+    display: flex;
 }
 
- .wrapper{
-     display: flex;
- }
- 
  .nav-bar{
      flex-basis: 230px;
      background-color: brown;
+     height: 100%;
  }
  
  main{
      flex-basis: calc(100% - 230px);
      background-color: green;
-     display: flex;
-     flex-direction: column;
+     /*display: flex;
+     flex-direction: column;*/
+     overflow: auto;
  }
  
  header{
-     flex-basis: 80px;
+     height: 80px;
      background-color: lightgray;
      position: sticky; 
      top: 0;
@@ -49,7 +47,7 @@
  }
  
  .content{
-     flex-basis: calc(100vh - 80px);
+     height: calc(100vh - 160px);
  }
  
  img{
@@ -262,10 +260,15 @@
      .new-playlist i{
          display: none;
      }
- 
+    
+    .new-playlist span{
+        display: none;
+    }
+
      .name-playlist li{
          display: none;
      }
+
  
      /* menu navigazione responsive mobile */
      .menu-list li{
