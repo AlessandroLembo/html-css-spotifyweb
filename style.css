@@ -238,13 +238,13 @@
  
  /* Mobile Responsive */
  @media screen and (max-width: 768px){
-     .mini-wrapper{
-         width: calc(100% - 50px);
+     main{
+         flex-basis: calc(100% - 50px);
      }
      
      /* side-bar respponsive mobile */
      .nav-bar{
-         width: 50px;
+         flex-basis: 50px;
      }    
  
      .invisible-mobile{
