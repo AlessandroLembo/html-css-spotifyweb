@@ -1,297 +1,300 @@
 /* CSS RESET */
 /* Approccio Desktop-first */
 *{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-}
-
-/* Gnererics */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ 
+ /* Gnererics */
+ body{
+     font-family: 'Montserrat', sans-serif;
+ }
+ 
+ footer{
+     height: 80px;
+     /* background-color: rgba(0, 0, 0, 0.7); */
+     background-color: blue;
+  } 
+ 
 .container{
-    font-family: 'Montserrat', sans-serif;
-}
-
-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-color: blue;
-    z-index: 1;
-}
-
-.wrapper{
-    background-color: aqua;
-    display: flex;
-}
-
-.nav-bar{
     height: calc(100vh - 80px);
-    width: 230px;
-    background-color: brown;
+    overflow: auto;
+    background-color: aqua;
 }
 
-.mini-wrapper{
-    width: calc(100% - 230px);
-    background-color: green;
-}
-
-header{
-    height: 80px;
-    background-color: lightgray;
-    position: relative; 
-}
-
-.content{
-    height: calc(100vh - 160px);
-    overflow-y: auto;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-/* Utils */
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-}
-
-.column{
-    padding: 1rem;
-}
-
-/* Side-bar */
-
-.flex-column{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.visible-mobile{
-    display: none;
-}
-
-
-/* Header */
-.btn-header{
-    text-align: right;
-    position: absolute;
-    right: 0;
-    top: 20px;
-}
-
-/* menu navigazione del content */
-.menu-list{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.menu-list li{
-    list-style-type: none;
-    padding: 1rem;
-    cursor: pointer;
-    text-align: center;
-}
-
-.menu-list a{
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 30px;
-}
-
-/* content spotify */
-.col-size{
-    min-height: 200px;
-    flex-basis: calc(100% / 6); 
-    border: 2px dashed red;
-}
-
-/* Footer */
-/* playing brano in esecuzione */
-.footer-row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.w-33{
-    height: 50px;
-    border: 1px dashed red;
-    flex-basis: calc(100% / 3);
-}
-
-.playing{
-    display: flex;
-    align-items: center;
-}
-
-.song-playing{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 50px;
-    margin-right: 20px;
-}
-
-.song-img{
-    height: 50px;
-    width: 50px;
-}
-
-/* time-playing comandi del brano */
-.command-song{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-.command-song *{
-    padding: 0 20px;
-    color: white;
-    font-size: 15px;
-}
-
-.fa-circle-play{
-    font-size: 20px;
-}
-
-.bar-song{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.bar-song *{
-    padding: 0 20px;
-    font-size: 12px;
-}
-
-.timing-bar{
-    flex-basis: 80%;
-    border: 2px solid rgba(0, 0, 0, 0.7);
-}
-
-
-/******************************
-RESPONSIVE
-*******************************
-
-/* Laptop Responsive */
-@media screen and (max-width: 1200px){
-    /* menu navigazione responsive laptop */
-    .menu-list li{
-        flex-basis: 20%;
-    }
+ .wrapper{
+     display: flex;
+ }
+ 
+ .nav-bar{
+     flex-basis: 230px;
+     background-color: brown;
+ }
+ 
+ main{
+     flex-basis: calc(100% - 230px);
+     background-color: green;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ header{
+     flex-basis: 80px;
+     background-color: lightgray;
+     position: sticky; 
+     top: 0;
+     left: 0;
+     right: 0;
+ }
+ 
+ .content{
+     flex-basis: calc(100vh - 80px);
+ }
+ 
+ img{
+     max-width: 100%;
+     height: auto;
+ }
+ 
+ /* Utils */
+ .row{
+     display: flex;
+     flex-wrap: wrap;
+     margin-bottom: 3rem;
+ }
+ 
+ .column{
+     padding: 1rem;
+ }
+ 
+ /* Side-bar */
+ 
+ .flex-column{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: space-between;
+ }
+ 
+ .visible-mobile{
+     display: none;
+ }
+ 
+ 
+ /* Header */
+ .btn-header{
+     text-align: right;
+     position: absolute;
+     right: 0;
+     top: 20px;
+ }
+ 
+ /* menu navigazione del content */
+ .menu-list{
+     display:flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+ 
+ .menu-list li{
+     list-style-type: none;
+     padding: 1rem;
+     cursor: pointer;
+     text-align: center;
+ }
+ 
+ .menu-list a{
+     text-decoration: none;
+     color: rgba(255, 255, 255, 0.4);
+     font-size: 30px;
+ }
+ 
+ /* content spotify */
+ .col-size{
+     min-height: 200px;
+     flex-basis: calc(100% / 6); 
+     border: 2px dashed red;
+ }
+ 
+ /* Footer */
+ /* playing brano in esecuzione */
+ .footer-row{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100%;
+ }
+ 
+ .w-33{
+     height: 50px;
+     border: 1px dashed red;
+     flex-basis: calc(100% / 3);
+ }
+ 
+ .playing{
+     display: flex;
+     align-items: center;
+ }
+ 
+ .song-playing{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     height: 50px;
+     margin-right: 20px;
+ }
+ 
+ .song-img{
+     height: 50px;
+     width: 50px;
+ }
+ 
+ /* time-playing comandi del brano */
+ .command-song{
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     margin-bottom: 10px;
+ }
+ 
+ .command-song *{
+     padding: 0 20px;
+     color: white;
+     font-size: 15px;
+ }
+ 
+ .fa-circle-play{
+     font-size: 20px;
+ }
+ 
+ .bar-song{
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+ }
+ 
+ .bar-song *{
+     padding: 0 20px;
+     font-size: 12px;
+ }
+ 
+ .timing-bar{
+     flex-basis: 80%;
+     border: 2px solid rgba(0, 0, 0, 0.7);
+ }
+ 
+ 
+ /******************************
+ RESPONSIVE
+ *******************************
+ 
+ /* Laptop Responsive */
+ @media screen and (max-width: 1200px){
+     /* menu navigazione responsive laptop */
+     .menu-list li{
+         flex-basis: 20%;
+     }
+     
+     
+     /* card responsive laptop */
+     .col-size{
+         flex-basis: 25%;
+     }
+ }
+ 
+ /* Tablet Responsive */
+ @media screen and (max-width: 992px){
+     /* menu navigazione responsive tablet */
+     .menu-list li{
+         flex-basis: calc(100% / 3);
+     }
+ 
+     /* card responsive tablet */
+     .col-size{
+         flex-basis: 50%;
+     }
+ 
+     /* Footer tablet responsive */
+     .w-33{
+         flex-basis: 35%;
+     }
     
-    
-    /* card responsive laptop */
-    .col-size{
-        flex-basis: 25%;
-    }
-}
-
-/* Tablet Responsive */
-@media screen and (max-width: 992px){
-    /* menu navigazione responsive tablet */
-    .menu-list li{
-        flex-basis: calc(100% / 3);
-    }
-
-    /* card responsive tablet */
-    .col-size{
-        flex-basis: 50%;
-    }
-
-    /* Footer tablet responsive */
-    .w-33{
-        flex-basis: 35%;
-    }
-   
-    .w-33:first-child{
-        flex-basis: 30%;
-    }
-
-    .song-img{
-        height: 40px;
-        width: 40px;
-    }
-    
-    .save-song{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-
-/* Mobile Responsive */
-@media screen and (max-width: 768px){
-    .mini-wrapper{
-        width: calc(100% - 50px);
-    }
-    
-    /* side-bar respponsive mobile */
-    .nav-bar{
-        width: 50px;
-    }    
-
-    .invisible-mobile{
-        display: none; 
-    }
-
-    .visible-mobile{
-        display: block;
-    }
-    
-    .new-playlist h2{
-        display: none;
-    }
-
-    .new-playlist i{
-        display: none;
-    }
-
-    .name-playlist li{
-        display: none;
-    }
-
-    /* menu navigazione responsive mobile */
-    .menu-list li{
-        flex-basis: 25%;
-    }
-
-    /* footer mobile responsive */
-    /* playing brano in esecuzione mobile responsive*/
-
-    .w33{
-        flex-basis: calc(100% / 3);
-    }
-
-    .w-33:first-child{
-        flex-basis: calc(100% / 3); 
-    }
-
-    .song-img{
-        height: 30px;
-        width: 30px; 
-    }
-
-    /* time-playing comandi del brano mobile responsive */
-    .bar-song *{
-        padding: 0 5px;
-    }
-
-    .command-song *{
-        padding: 0 20px;
-    }
-
-}
+     .w-33:first-child{
+         flex-basis: 30%;
+     }
+ 
+     .song-img{
+         height: 40px;
+         width: 40px;
+     }
+     
+     .save-song{
+         display: flex;
+         flex-direction: column;
+     }
+ }
+ 
+ 
+ /* Mobile Responsive */
+ @media screen and (max-width: 768px){
+     .mini-wrapper{
+         width: calc(100% - 50px);
+     }
+     
+     /* side-bar respponsive mobile */
+     .nav-bar{
+         width: 50px;
+     }    
+ 
+     .invisible-mobile{
+         display: none; 
+     }
+ 
+     .visible-mobile{
+         display: block;
+     }
+     
+     .new-playlist h2{
+         display: none;
+     }
+ 
+     .new-playlist i{
+         display: none;
+     }
+ 
+     .name-playlist li{
+         display: none;
+     }
+ 
+     /* menu navigazione responsive mobile */
+     .menu-list li{
+         flex-basis: 25%;
+     }
+ 
+     /* footer mobile responsive */
+     /* playing brano in esecuzione mobile responsive*/
+ 
+     .w33{
+         flex-basis: calc(100% / 3);
+     }
+ 
+     .w-33:first-child{
+         flex-basis: calc(100% / 3); 
+     }
+ 
+     .song-img{
+         height: 30px;
+         width: 30px; 
+     }
+ 
+     /* time-playing comandi del brano mobile responsive */
+     .bar-song *{
+         padding: 0 5px;
+     }
+ 
+     .command-song *{
+         padding: 0 20px;
+     }
+ 
+ }
