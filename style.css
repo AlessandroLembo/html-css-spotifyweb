@@ -29,6 +29,8 @@
     background-color: brown;
     height: 100%;
     overflow: auto;
+    position: relative;
+    padding: 10px;
  }
  
  main{
@@ -69,22 +71,81 @@
 }
 
 .nav-bar img{
-    height: 60px;
-    width: 60px;
-    padding: 10px;
+    height: 30px;
+    width: 30px;
+    padding: 5px 0;
+}
+
+.icon-topnav{
+    margin-bottom: 20px;
 }
 
 #img-logo{
-    height: 70px;
-    width: 120px;
+    height: 55px;
+    width: 150px;
 }
 
-.flex-column{
+.new-playlist h2 {
+    text-align: left;
+    color: white;
+}
+
+.crea-playlist{
+   display: flex;
+   align-items: center;
+}
+
+.crea-playlist span{
+    color: rgba(255, 255, 255, 0.4);
+    margin-left: 5px;
+}
+
+.fa-square-plus{
+    font-size: 35px;
+}
+
+.nav-playlist *{
+    padding: 3px 0;
+}
+
+.playlist-sidebar{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
+.icon-flex{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.4);
+}
+
+.playlist-bar{
+    width: 5px;
+    height: 200px;
+    background-color: white;
+}
+
+.bar-reload{
+    width: 4px;
+    height: 180px;
+    background-color: grey;
+}
+
+.bottom-nav{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.hr-bottomnav{
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    width: 210px;
+}
 
  /* Header */
  .btn-header{
@@ -356,3 +417,36 @@
      }
 
  }
+
+ /* Responsive Height */
+ @media screen and (max-height: 640px) {
+    .visible-mobile{
+        display: block;
+    }
+ }
+ 
+ @media screen and (max-height: 625px) {
+   .bottom-nav{
+    display: none;
+   
+   }
+
+   .bar-reload{
+    height: 140px;
+}
+
+ }
+
+ @media screen and (max-height: 570px) {
+    .bar-reload{
+     height: 100px;
+ }
+ 
+  }
+
+  @media screen and (max-height: 480px) {
+    .bar-reload{
+     height: 40px;
+ }
+ 
+  }
