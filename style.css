@@ -27,12 +27,15 @@
  .nav-bar{
     flex: 0 0 230px;
     background-color: brown;
+    height: 100%;
+    overflow: auto;
  }
  
  main{
      flex: 1 1 auto;
      background-color: green;
      overflow: auto;   
+     height: 100%;
  }
  
  header{
@@ -44,13 +47,8 @@
      right: 0;
  }
  
- .content{
-    height: calc(100vh - 160px);
- }
- 
  img{
      max-width: 100%;
-     height: auto;
  }
  
  /* Utils */
@@ -68,8 +66,25 @@
  .visible-mobile{
     display: none;
 }
- 
- 
+
+.nav-bar img{
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+}
+
+#img-logo{
+    height: 70px;
+    width: 120px;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
  /* Header */
  .btn-header{
      text-align: right;
@@ -137,7 +152,15 @@
      height: 50px;
      width: 50px;
  }
- 
+
+ .being-played span{
+    font-size: 12px;
+ }
+
+ .song-name h3{
+    font-size: 15px;
+ }
+
  /* time-playing comandi del brano */
  .command-song{
      display: flex;
@@ -171,7 +194,23 @@
      flex-basis: 80%;
      border: 2px solid rgba(0, 0, 0, 0.7);
  }
+
+ /* setting spotify */
+ .setting{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ }
  
+ .setting-bar{
+    border: 2px solid rgba(0, 0, 0, 0.7);
+ }
+
+ .items-setting{
+    flex-basis: 30%;
+    text-align: right;
+    margin: 0 10px;
+ }
  
  /******************************
  RESPONSIVE
@@ -226,14 +265,18 @@
  
  /* Mobile Responsive */
  @media screen and (max-width: 768px){
-     main{
+    main{
          flex-basis: calc(100% - 50px);
      }
      
      /* side-bar respponsive mobile */
      .nav-bar{
          flex-basis: 50px;
-     }    
+     }  
+     
+     .nav-bar img{
+        padding: 5px;
+     }
  
      .invisible-mobile{
          display: none; 
@@ -242,24 +285,7 @@
      .visible-mobile{
          display: block;
      }
-   /*  
-     .new-playlist h2{
-         display: none;
-     }
  
-     .new-playlist i{
-         display: none;
-     }
-    
-    .new-playlist span{
-        display: none;
-    }
-
-     .name-playlist li{
-         display: none;
-     }
-
- */
      /* menu navigazione responsive mobile */
      .menu-list li{
          flex-basis: 25%;
@@ -280,6 +306,11 @@
          height: 30px;
          width: 30px; 
      }
+
+     .being-played{
+        display: flex;
+        flex-direction: column;
+     }
  
      /* time-playing comandi del brano mobile responsive */
      .bar-song *{
@@ -289,5 +320,11 @@
      .command-song *{
          padding: 0 20px;
      }
- 
+     
+     /* setting spotify mobile responsive */
+     .items-setting{
+        flex-basis: 50%;
+        margin: 0 5px;
+     }
+
  }
