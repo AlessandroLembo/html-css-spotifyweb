@@ -83,8 +83,8 @@
     margin-bottom: 1rem;
  }
 
-
  /* Side-bar */
+ /* style top navbar */
  .visible-mobile{
     display: none;
 }
@@ -105,9 +105,13 @@
     align-items: center;
 }
 
+/* style playlist navbar */
+.new-playlist *{
+    padding: 3px 0;
+}
+
 .new-playlist h2 {
     text-align: left;
-    /* color: white; */
 }
 
 .crea-playlist{
@@ -124,14 +128,14 @@
     font-size: 35px;
 }
 
-.nav-playlist *{
-    padding: 3px 0;
-}
-
 .playlist-sidebar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.name-playlist li{
+    padding: 0.5rem 0;
 }
 
 .nav-bar a{
@@ -155,6 +159,7 @@
     background-color: grey;
 }
 
+/* style bottom navbar */
 .bottom-nav{
     position: absolute;
     bottom: 0;
@@ -165,16 +170,20 @@
     border: 1px solid rgba(255, 255, 255, 0.4);
     width: 210px;
 }
-
  /* Header */
+.header-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
  .btn-header{
-     text-align: right;
-     position: absolute;
-     right: 0;
-     top: 50%;
-     transform: translate(0, -50%);
      padding: 10px 20px;
      border-radius: 20px;
+     border: 1px solid white;
+     background-color: rgb(0, 26, 51, 0.8);
+     color: white;
  }
  
  /* menu navigazione del content */
@@ -253,6 +262,10 @@
     flex-basis: 50%;
  }
  
+.footer-row i{
+    color: rgba(255, 255, 255, 0.4);
+}
+
  .playing{
      display: flex;
      align-items: center;
@@ -283,11 +296,15 @@
  .command-song{
      display: flex;
      justify-content: center;
-     align-items: flex-start;
+     align-items: center;
  }
  
  .command-song i{
      font-size: 15px;
+ }
+
+ .command-song :nth-child(3){
+    font-size: 25px;
  }
  
  .fa-circle-play{
@@ -335,6 +352,55 @@
     font-size: 12px;
  }
  
+/*******************************
+EFFETTI IN HOVER
+********************************/
+.hover-colored:hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* items nav-bar in hover */
+.new-playlist .crea-playlist:hover > *{
+    cursor: pointer;
+    color: white;
+ }
+
+ /* header btn in hover */
+.btn-header:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    margin-right: 50px;
+}
+
+/* card in hover */
+.column{
+   cursor: pointer; 
+}
+
+.column figure{
+   position: relative;
+}
+
+.column .card:hover figure::after{
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+   content: "\f144";
+   font-family: "Font Awesome 5 Free";
+   font-size: 50px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* footer items in hover */
+
+
  /******************************
  RESPONSIVE
  *******************************
