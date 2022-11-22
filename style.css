@@ -9,12 +9,12 @@
  /* Generics */
  body{
      font-family: 'Montserrat', sans-serif;
+     color: white;
  }
  
  footer{
      height: 80px;
-     /* background-color: rgba(0, 0, 0, 0.7); */
-     background-color: blue;
+     background-color: #252525;
   } 
  
 .container{
@@ -26,7 +26,7 @@
 
  .nav-bar{
     flex: 0 0 230px;
-    background-color: brown;
+    background-color: #000f1a;
     height: 100%;
     overflow: auto;
     position: relative;
@@ -35,15 +35,15 @@
  
  main{
      flex: 1 1 auto;
-     background-color: green;
+     background-color:  #00264d;
      overflow: auto;   
      height: 100%;
  }
  
  header{
      height: 80px;
-     background-color: lightgray;
      position: sticky; 
+     background-color: rgb(0, 26, 51, 0.8);
      top: 0;
      left: 0;
      right: 0;
@@ -72,7 +72,7 @@
  }
 
  .pdg-small-side{
-    padding: 0 1rem;
+    padding: 0 1rem 0.5rem;
  }
 
  .pdg-exsmall-side{
@@ -107,7 +107,7 @@
 
 .new-playlist h2 {
     text-align: left;
-    color: white;
+    /* color: white; */
 }
 
 .crea-playlist{
@@ -213,6 +213,10 @@
     border: 1px solid yellowgreen;
 }
 
+.card-wrapper p{
+    padding: 0.5rem 0 0;
+}
+
  .card h2{
     font-size: 16px;
     padding: 5px 0;
@@ -282,8 +286,7 @@
      align-items: flex-start;
  }
  
- .command-song *{
-     color: white;
+ .command-song i{
      font-size: 15px;
  }
  
@@ -294,7 +297,7 @@
  .bar-song{
      display: flex;
      justify-content: space-between;
-     align-items: flex-end;
+     align-items: center;
  }
  
  .bar-song *{
@@ -363,14 +366,6 @@
      }
  
      /* Footer tablet responsive */
-     .w-33{
-         flex-basis: 35%;
-     }
-    
-     .w-33:first-child{
-         flex-basis: 30%;
-     }
- 
      .song-img{
          height: 40px;
          width: 40px;
@@ -415,15 +410,6 @@
  
      /* footer mobile responsive */
      /* playing brano in esecuzione mobile responsive*/
- 
-     .w33{
-         flex-basis: calc(100% / 3);
-     }
- 
-     .w-33:first-child{
-         flex-basis: calc(100% / 3); 
-     }
- 
      .song-img{
          height: 30px;
          width: 30px; 
@@ -435,19 +421,30 @@
      }
  
      /* time-playing comandi del brano mobile responsive */
-     .bar-song *{
-         padding: 0 5px;
+     .command-song i{
+         padding: 5px 10px;
      }
- 
-     .command-song *{
-         padding: 0 20px;
+
+     .bar-song span{
+        padding: 0 5px;
      }
      
      /* setting spotify mobile responsive */
      .items-setting{
-        flex-basis: 50%;
         margin: 0 5px;
      }
+
+ }
+
+ /* footer behaviour extra-small screen */
+ @media  screen and (max-width: 485px) {
+    .playing, .setting{
+        display: none;
+    }
+
+    .w-50{
+        flex-basis: 100%;
+    }
 
  }
 
