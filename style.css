@@ -21,7 +21,6 @@
     height: calc(100vh - 80px);
     overflow: auto; 
     display: flex;
-    background-color: beige;
 }
 
  .nav-bar{
@@ -83,7 +82,7 @@
     margin-bottom: 1rem;
  }
 
- /* Side-bar */
+ /* Side-bar  */
  /* style top navbar */
  .visible-mobile{
     display: none;
@@ -411,7 +410,6 @@ EFFETTI IN HOVER
      .menu-list li{
          flex-basis: 20%;
      }
-     
      
      /* card responsive laptop */
      .col-size{
